@@ -203,17 +203,18 @@ function App() {
                     <h2 className="card-title">{item}</h2>
                     {
                       userExp.length>0 && userExp.map((uexp,uexpIndex)=>{
-                        if(uexp.flow==='i' && uexp.spentOn===item){
-                          return (
+                        return (
+                          <>
+                           {
+                            (uexp.flow==='i' && uexp.spentOn===item) &&
                             <p key={uexpIndex}>{uexp.spentOn} lended rs.{uexp.amount}</p>
-                            )
-                        }
-                        if(uexp.flow==='o' && uexp.spentOn===item){
-                          return (
+                           }
+                           {
+                            (uexp.flow==='o' && uexp.spentOn===item) && 
                             <p key={uexpIndex}>{uexp.spentOn} owes rs.{uexp.amount} to {uexp.paidBy}</p>
-                            )
-                        }
-                       
+                           }
+                          </>
+                        )
                       })
                     }
                     
