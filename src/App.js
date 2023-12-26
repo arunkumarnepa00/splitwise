@@ -160,7 +160,7 @@ function App() {
             </select>
           </label>
 
-         <button className="my-auto p-2 ml-5 bg-[#718355] text-white rounded-md"
+         <button className="my-2 p-2 ml-5 bg-[#718355] text-white rounded-md"
           onClick={(e)=>{
             handleAddExpense(e)
           }}
@@ -192,13 +192,13 @@ function App() {
         }
 
       </div>
-       <div className="my-10 flex flex-wrap m-5">
+       <div className="my-10 flex flex-wrap mx-5">
 
        {
         friends.length>0 && friends.map((item,index)=>{
           return (
             <div key={index} >
-                <div className="card card-compact w-96 bg-[#B5C99A] shadow-xl my-4">
+                <div className="card card-compact w-80 bg-[#B5C99A] shadow-xl my-4">
                   <div className="card-body">
                     <h2 className="card-title">{item}</h2>
                     {
